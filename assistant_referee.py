@@ -1,5 +1,5 @@
-import argparse
 import yolov5
+import argparse
 from automated_var.src.assistant_var_functionalities import mistaken_identity_checker as mic
 from automated_var.src.assistant_var_functionalities import offside_checker as oc
 

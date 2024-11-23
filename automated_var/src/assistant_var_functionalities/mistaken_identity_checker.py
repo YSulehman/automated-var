@@ -53,10 +53,14 @@ class IdentityCheck:
                 
                 # loop through the results
                 for result in results:
+                    # result is of the form (batch_size (=1 in this case), number of predictions, 6)
+                    # parse first for predictions
+                    prediction = result[0]
+
                     # get the class index, bounding box coordinates and label of the object
-                    class_index = result[5]
+                    class_index = result[:, 5]
                     predicted_class = self.class_names[class_index]
-                    x1, y1, x2, y2 = result[:4]
+                    x1, y1, x2, y2 = prediction[:, :4]
 
                     # get the colour for the bounding box
                     colour = self._class_colours(class_index)

@@ -1,5 +1,5 @@
 import argparse
-from yolov5 import train, val, detect, export
+from yolov5 import train, val
 
 class FineTuneModel:
     def __init__(self, data: str, batch_size: int, img_size: int, project: str = None, name: str = None):
@@ -31,3 +31,13 @@ if __name__=="__main__":
     parser.add_argument("--img-size", type=int, default=640, help="image size for training")
     parser.add_argument("--project", type=str, help="project name")
     parser.add_argument("--name", type=str, help="experiment name")
+    parser.add_argument("-val", "--validate", action="store_true", help="validate the model")
+
+    args = parser.parse_args()
+
+    # create an instance of the FineTuneModel class and train
+    ftm = FineTuneModel(args.data, args.batch_size, args.img_size, args.project, args.name)
+    ftm.train_model()
+    # optionally validate the model
+    if args.validate:
+        ftm.validate_model()

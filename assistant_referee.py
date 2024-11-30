@@ -41,7 +41,7 @@ if __name__ == "__main__":
     parser.add_argument("-com", "--command", type=str, choices=["identity-check", "offside-check"], required=True, help="which VAR functionality to run")
     parser.add_argument("-ftm", "--fine-tuned-model", type=str, help="path to the fine-tuned YOLOV5 model")
     parser.add_argument("-sv", "--source-video", type=str, required=True, help="path to the input video")
-    parser.add_argument("-dv", "--destination-video", type=str, help="path to the output video")
+    parser.add_argument("-dv", "--destination-video", type=str, help="path to the output (annotated) video")
 
     args = parser.parse_args()
 

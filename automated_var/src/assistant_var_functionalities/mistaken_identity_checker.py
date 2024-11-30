@@ -35,7 +35,10 @@ class IdentityCheck:
         height = int(vid_capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
         # will I also need an output video, i.e. the annotated video? ADD IN ARGUMENTS
-        annotated_video = cv2.VideoWriter()
+        # arguments are the destination video, the codec, the frames per second and the size of the video
+        # fourcc: 4-byte code used to specify the video codec, i.e. the video compression format
+        fourcc = cv2.VideoWriter_fourcc(*'MP4V')
+        annotated_video = cv2.VideoWriter(destination_video, fourcc, 20, (width, height))
 
 
         # use a while loop to read frames from the video
@@ -67,8 +70,8 @@ class IdentityCheck:
 
                     # draw the bounding box on the frame
                     cv2.rectangle(resized_frame, (x1, y1), (x2, y2), colour, 2)
-                    # label the text
-                    cv2.putText(resized_frame, predicted_class, (x1, y1-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, colour, 2)
+                    # label the text, args specify the frame, text, position, font, font scale, colour and thickness
+                    cv2.putText(resized_frame, predicted_class, (x1 - 10, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, colour, 2)
 
                 # write the annotated frame to the annotated video
                 annotated_video.write(resized_frame)

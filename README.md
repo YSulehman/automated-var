@@ -9,6 +9,9 @@ Examples of both functionalities are provided below.
 
 ## Requirements
 
+### Locally
+If you are running the application locally, install the dependencies via ```pip install -r requirements.txt```. See the [Mistaken identity](#mistaken-identity) and [Offside calls](#offisde-calls) below for running the corresponding functionalities.
+
 ## Model Fine-tuning
 
 ## Mistaken identity

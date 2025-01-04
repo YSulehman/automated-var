@@ -19,8 +19,8 @@ instructions for running the container and executing the application.
 
 The container image already exists on [Dockerhub](https://hub.docker.com/) and can be executed as follows: 
 
-1. Pull the image: docker pull ysulehman/automated-var-image
-2. Run the container: docker run
+1. Pull the image: ```docker pull ysulehman/automated-var-image:latest```
+2. Run the container: ```docker run```
 
 ## Model Fine-tuning
 The [YOLOV5s](https://pypi.org/project/yolov5/) model is used for detection, fine-tuned on the [SoccerNet dataset](https://drive.google.com/drive/folders/17w9yhEDZS7gLdZGjiwPQytLz3-iTUpKm). 

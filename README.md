@@ -1,5 +1,5 @@
 # Automated VAR
-**Under development**
+**Under development-- setting up docker image**
 
 Automated video assistant referee; this repository automates some of the functionalities performed by [VAR](https://www.premierleague.com/VAR). The included functionalities include: 
 

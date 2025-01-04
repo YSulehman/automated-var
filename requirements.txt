@@ -13,7 +13,7 @@ contourpy==1.2.0
 cryptography==43.0.0
 cvxpy @ file:///home/conda/feedstock_root/build_artifacts/cvxpy-split_1708890476237/work
 cycler==0.12.1
--e git+ssh://git@github.com/YSulehman/dcp_vga.git@96a9101c46e06ee07562fa30c5481c221124dc3d#egg=dcp_vga
+# -e git+ssh://git@github.com/YSulehman/dcp_vga.git@96a9101c46e06ee07562fa30c5481c221124dc3d#egg=dcp_vga
 distro==1.9.0
 docutils==0.21.2
 ecos @ file:///home/conda/feedstock_root/build_artifacts/ecos_1707295323050/work
@@ -88,7 +88,7 @@ roboflow==1.1.49
 s3transfer==0.10.3
 safetensors==0.4.5
 sahi==0.11.18
-scipy @ file:///home/conda/feedstock_root/build_artifacts/scipy-split_1706041474046/work/dist/scipy-1.12.0-cp312-cp312-linux_x86_64.whl#sha256=455585fb13f602615d4e6633d9becf631347243101f5b6983e5718c2dd364888
+scipy==1.12.0
 scs @ file:///home/conda/feedstock_root/build_artifacts/scs_1707387081947/work
 seaborn==0.13.2
 SecretStorage==3.3.3
